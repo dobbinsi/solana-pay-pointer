@@ -12,6 +12,8 @@ import { clusterApiUrl } from '@solana/web3.js'
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
+  BackpackWalletAdapter,
+  GlowWalletAdapter,
 } from '@solana/wallet-adapter-wallets'
 
 require('@solana/wallet-adapter-react-ui/styles.css')
@@ -29,6 +31,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const wallets = [
     new PhantomWalletAdapter(),
     new SolflareWalletAdapter({ network }),
+    new BackpackWalletAdapter(),
+    new GlowWalletAdapter(),
   ]
 
   return (
